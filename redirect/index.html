@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento Aprovado - Provei tudo</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        .success-container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        .success-card {
+            background: var(--card-bg);
+            border: 2px solid var(--primary-color);
+            border-radius: 16px;
+            padding: 30px;
+            width: 100%;
+            box-shadow: 0 0 30px rgba(0, 255, 136, 0.2);
+            text-align: center;
+            animation: pulse-success 2s infinite;
+        }
+
+        .success-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            box-shadow: 0 0 20px var(--primary-glow);
+            animation: scaleIn 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .success-icon svg {
+            width: 50px;
+            height: 50px;
+            stroke: #000;
+            stroke-width: 3;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .success-title {
+            font-size: clamp(1.5rem, 5vw, 2rem);
+            font-weight: 800;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            text-shadow: 0 0 15px var(--primary-glow);
+        }
+
+        .success-message {
+            font-size: clamp(1rem, 3vw, 1.1rem);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .info-box {
+            background: rgba(0, 255, 136, 0.1);
+            border: 1px solid rgba(0, 255, 136, 0.3);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .info-box p {
+            color: var(--text-secondary);
+            font-size: clamp(0.9rem, 3vw, 1rem);
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        .info-box strong {
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        .warning-box {
+            background: rgba(255, 136, 0, 0.1);
+            border: 1px solid rgba(255, 136, 0, 0.3);
+            border-radius: 12px;
+            padding: 20px;
+            display: flex;
+            align-items: start;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .warning-icon {
+            color: #ff8800;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .warning-box p {
+            color: var(--text-secondary);
+            font-size: clamp(0.85rem, 3vw, 0.95rem);
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        @keyframes scaleIn {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="container">
+        <div class="success-container">
+            <div class="success-card">
+                <div class="success-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                </div>
+
+                <h1 class="success-title">Pagamento Aprovado!</h1>
+
+                <p class="success-message">
+                    Sua compra foi processada com sucesso.
+                </p>
+
+                <div class="info-box">
+                    <p>
+                        <strong>Você receberá um relatório completo em até 5 dias úteis</strong> no email cadastrado
+                        durante a compra.
+                    </p>
+                </div>
+
+                <div class="info-box">
+                    <p>
+                        Assim que o relatório estiver pronto, você será notificado por email com todos os detalhes da
+                        investigação.
+                    </p>
+                </div>
+
+                <div class="warning-box">
+                    <svg class="warning-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="12" y1="8" x2="12" y2="12"></line>
+                        <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                    </svg>
+                    <p>
+                        <strong>Importante:</strong> Nenhuma notificação ou aviso será enviado para o número espionado.
+                        Sua investigação é 100% sigilosa e anônima.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

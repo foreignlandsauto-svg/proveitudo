@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Provei tudo - Espião de WhatsApp</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <main class="container">
+        <div class="hero">
+            <h1 class="title">Faça agora sua <span class="highlight">INVESTIGAÇÃO</span> SEM NOTIFICAÇÃO</h1>
+            <p class="subtitle">Descubra as mensagens suspeitas, fotos questionáveis e localizações duvidosas de
+                qualquer Whatsapp</p>
+
+            <div class="image-container">
+                <img src="assets/hero-image-v3.png" alt="Espião WhatsApp" class="hero-image">
+            </div>
+
+            <div class="input-section">
+                <label for="phone-input" class="input-label">Digite abaixo o número que deseja ESPIONAR</label>
+                <div class="input-wrapper">
+                    <input type="tel" id="phone-input" placeholder="(DDD) 99999-9999" autocomplete="off">
+                </div>
+                <div class="security-badge">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                        <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                    </svg>
+                    <span>DADOS PROTEGIDOS POR CRIPTOGRAFIA</span>
+                </div>
+            </div>
+
+            <button id="spy-btn" class="cta-button">Espiar Whatsapp</button>
+        </div>
+
+        <!-- Simulation UI (Hidden by default) -->
+        <div id="simulation-container" class="simulation-container" style="display: none;">
+            <div class="loader-circle"></div>
+            <h2 id="simulation-status" class="simulation-status">CLONANDO WHATSAPP...</h2>
+
+            <div class="progress-container">
+                <div id="progress-bar" class="progress-bar"></div>
+            </div>
+            <p id="progress-text" class="progress-text">0%</p>
+
+            <div class="steps-log">
+                <p id="step-log-text" class="step-log-text">Iniciando conexão segura...</p>
+            </div>
+
+            <!-- Contact Form on Simulation Screen -->
+            <div class="simulation-form">
+                <p class="form-instruction">Digite abaixo seu email e WhatsApp para receber o relatório completo:</p>
+                <div class="input-section">
+                    <div class="input-wrapper">
+                        <input type="email" id="sim-email" placeholder="Seu E-mail (Opcional)" class="promo-input">
+                    </div>
+                    <div class="input-wrapper">
+                        <input type="tel" id="sim-whatsapp" placeholder="Seu WhatsApp" class="promo-input">
+                    </div>
+                </div>
+                <button id="save-contact-btn" class="cta-button" style="margin-top: 10px;">SALVAR DADOS</button>
+            </div>
+        </div>
+
+        <!-- Promotion UI (Hidden by default) -->
+        <div id="promotion-container" class="promotion-container" style="display: none;">
+            <div class="promo-card">
+                <div class="alert-message">
+                    <p class="alert-text">10+ MENSAGENS SUSPEITAS ENCONTRADAS</p>
+                </div>
+
+                <h2 class="promo-title">PROMOÇÃO DE MONITORAMENTO<br><span class="promo-subtitle">PRIMEIRA
+                        COMPRA</span></h2>
+
+                <div class="price-box">
+                    <p class="old-price">De: R$ 79,90 / 5 consultas</p>
+                    <p class="new-price">POR: <span class="big-price">R$ 19,90</span> / 5 consultas</p>
+                </div>
+
+                <p class="promo-instruction">Clique abaixo para liberar o acesso completo</p>
+
+                <button id="finish-btn" class="cta-button pulse-btn">LIBERAR ACESSO AGORA</button>
+            </div>
+        </div>
+
+        <!-- QR Code Payment Area (Hidden by default) -->
+        <div id="qrcode-container" class="qrcode-container" style="display: none;">
+            <div class="qrcode-card">
+                <img id="qrcode-image" src="" alt="QR Code de Pagamento" class="qrcode-image">
+
+                <p class="qrcode-instruction">
+                    O pagamento pode demorar até 1 minuto para cair no sistema. Aguarde<br><br>
+                    Você receberá um relatório completo em seu Whatsapp, sem qualquer notificação ou aviso para o
+                    número espionado.
+                </p>
+
+                <div class="pix-section">
+                    <h3 class="pix-title">PIX Copia e Cola</h3>
+                    <p class="pix-instruction">Copie esse link e cole em PIX Copia e Cola em seu banco de preferência.
+                    </p>
+                    <div class="pix-code-container">
+                        <input type="text" id="pix-code" class="pix-code-input" readonly>
+                        <button id="copy-pix-btn" class="copy-pix-btn">COPIAR</button>
+                    </div>
+                </div>
+
+                <div class="countdown-timer">
+                    <p class="timer-label">Tempo restante:</p>
+                    <p id="countdown-text" class="countdown-text">3:00</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
