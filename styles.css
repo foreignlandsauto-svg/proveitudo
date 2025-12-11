@@ -470,21 +470,33 @@ body {
 /* Mobile Responsive */
 @media (max-width: 480px) {
     body {
-        padding: 10px 0;
+        padding: 0;
+        margin: 0;
+        width: 100vw;
+        max-width: 100vw;
         height: 100dvh;
         overflow: hidden;
-        /* Force no scrolling */
+        position: fixed;
+        /* Lock body in place */
     }
 
     .container {
-        padding: 0 15px;
-        width: 100%;
+        padding: 10px;
+        /* Reduced padding */
+        width: 100vw;
+        /* Ensure full viewport width */
+        max-width: 100vw;
+        height: 100dvh;
+        overflow-y: auto;
+        /* Allow internal scrolling if absolutely needed, but hidden on body */
+        overflow-x: hidden;
+        margin: 0;
+    }
+
+    input,
+    .input-wrapper {
         max-width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        /* Distribute space evenly */
+        box-sizing: border-box;
     }
 
     .hero {
