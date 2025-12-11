@@ -13,6 +13,8 @@
     padding: 0;
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
+    overflow-wrap: break-word;
+    word-break: break-word;
 }
 
 html {
