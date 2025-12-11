@@ -457,16 +457,139 @@ body {
 }
 
 /* Mobile Responsive */
-@media (max-width: 350px) {
+@media (max-width: 480px) {
+    body {
+        padding: 10px 0;
+        height: 100dvh;
+        overflow: hidden;
+        /* Force no scrolling */
+    }
+
     .container {
         padding: 0 15px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        /* Distribute space evenly */
+    }
+
+    .hero {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        justify-content: space-between;
+        max-height: 100%;
+    }
+
+    .title {
+        font-size: 1.4rem;
+        margin-bottom: 5px;
+    }
+
+    .subtitle {
+        font-size: 0.8rem;
+        margin-bottom: 10px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .image-container {
+        margin-bottom: 10px;
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-height: 35vh;
+        /* Limit image height */
+    }
+
+    .hero-image {
+        max-height: 100%;
+        width: auto;
+        object-fit: contain;
     }
 
     .input-section {
-        padding: 15px;
+        padding: 12px;
+        margin-bottom: 10px;
+    }
+
+    .input-label {
+        font-size: 0.8rem;
+        margin-bottom: 8px;
+    }
+
+    #phone-input {
+        padding: 12px;
+        font-size: 1.1rem;
     }
 
     .cta-button {
-        padding: 15px 20px;
+        padding: 15px;
+        font-size: 1.1rem;
+        margin-top: auto;
+        /* Push to bottom if needed */
+    }
+
+    /* Simulation specific adjustments */
+    #simulation-container {
+        justify-content: center;
+        height: 100%;
+    }
+
+    .loader-circle {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 15px;
+    }
+
+    .simulation-status {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+
+    /* Promotion specific adjustments */
+    #promotion-container {
+        height: 100%;
+        justify-content: center;
+    }
+
+    .promo-card {
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        border: none;
+        /* Remove border to save space on small screens if card is full height */
+        background: transparent;
+    }
+
+    .promo-title {
+        font-size: 1rem;
+    }
+
+    .promo-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .big-price {
+        font-size: 1.5rem;
+    }
+
+    /* QR Code specific adjustments */
+    .qrcode-card {
+        padding: 15px;
+        max-height: 100%;
+        overflow-y: auto;
+    }
+
+    .qrcode-image {
+        max-height: 20vh;
+        width: auto;
     }
 }

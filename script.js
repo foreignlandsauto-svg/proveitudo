@@ -26,7 +26,7 @@ const steps = [
     "Finalizando relatório"
 ];
 
-const SIMULATION_DURATION = 180 * 1000;
+const SIMULATION_DURATION = 20 * 1000;
 const COUNTDOWN_DURATION = 180;
 let countdownInterval = null;
 
